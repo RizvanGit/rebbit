@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/components/navbar/Navbar";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata = {
   title: "Breadit",
@@ -19,7 +20,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "bg-white text-slate-900 antialiased light",
+        "bg-white text-slate-900 antialiased light no-touch",
         interFont.className,
       )}
     >
@@ -28,6 +29,7 @@ export default function RootLayout({
         <div className="container max-w-7xl mx-auto h-full pt-12">
           {children}
         </div>
+        <Toaster />
       </body>
     </html>
   );
